@@ -13,6 +13,10 @@ class ContactHelper:
         wd.find_element_by_xpath(
             "(.//*[normalize-space(text()) and normalize-space(.)='Password:'])[1]/following::input[2]").click()
 
+    def open_first_page(self):
+        wd = self.app.wd
+        wd.get('http://localhost/addressbook/')
+
     def fill_contact_form(self, contact):
         wd = self.app.wd
         self.open_add_contact_page()
@@ -32,6 +36,19 @@ class ContactHelper:
         #submit_contact_creation
         wd.find_element_by_xpath(
             "(.//*[normalize-space(text()) and normalize-space(.)='Notes:'])[1]/following::input[1]").click()
+        self.return_to_home_page()
+
+
+    def delete_first_contact(self):
+        wd = self.app.wd
+        self.open_add_contact_page()
+        self.open_first_page()
+        #select first contact
+        wd.find_element_by_name("selected[]").click()
+        #click delete
+        wd.find_element_by_xpath("/html/body/div/div[4]/form[2]/div[2]/input").click()
+        #submit deletion
+        wd.switch_to_alert().accept()
         self.return_to_home_page()
 
     def return_to_home_page(self):
