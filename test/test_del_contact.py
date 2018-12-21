@@ -1,14 +1,8 @@
 __autor__ = 'Dmitrii Dubrovskii'
-import pytest
-from fixture.application_contact import ApplicationContact
+from model.contact import Contact
 
-@pytest.fixture
-def app(request):
-    fixture = ApplicationContact()
-    request.addfinalizer(fixture.destroy)
-    return fixture
 
 def test_delete_first_contact(app):
-    app.session_contact.login(username="admin", password="secret")
+    if app.contact.count() == 0:
+        app.contact.create(Contact(fname="test", notes=""))
     app.contact.delete_first_contact()
-    app.session_contact.logout()

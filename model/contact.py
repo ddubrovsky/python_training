@@ -3,8 +3,8 @@ __author__ = 'Dmitrii'
 
 class Contact:
 
-    def __init__(self, fname, lname, nick, title, company, address, sellphone, email, bday, bmonth, byear, address2,
-                 notes):
+    def __init__(self, fname=None, lname=None, nick=None, title=None, company=None, address=None, sellphone=None,
+                 email=None, bday="-", bmonth="-", byear="-", address2=None, notes=None):
         self.fname = fname
         self.lname = lname
         self.nick = nick
