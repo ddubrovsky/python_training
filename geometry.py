@@ -78,3 +78,30 @@ l2 = [Point(el.x, -el.y) for el in l]
 
 print(l)
 print(l2)
+
+#Элементы функционального программирования: map и filter
+#map
+l = list(map(lambda i: Point(i, i*i), range (-5, 6)))
+
+l2 = list(map(lambda p: Point(p.x, -p.y), l))
+
+print(l)
+print(l2)
+
+#filter
+#filer > 0
+l = list(map(lambda i: Point(i, i*i), range (-5, 6)))
+
+l2 = list(filter(lambda p: p.x > 0, l))
+
+print(l)
+print(l2)
+
+#filter edd (оставляем чётные и проверяем что остаток равен 0)
+# list -  чтобы превратить в обычный список
+l = list(map(lambda i: Point(i, i*i), range (-5, 6)))
+
+l2 = list(filter(lambda p: p.x % 2 == 0, l))
+
+print(l)
+print(l2)
