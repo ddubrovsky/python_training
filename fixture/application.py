@@ -9,7 +9,7 @@ class Application:
 
     def __init__(self):
         self.wd = webdriver.Firefox()
-        self.wd.implicitly_wait(5)
+        self.wd.implicitly_wait(2)
         self.session = SessionHelper(self)
         self.group = GroupHelper(self)
         self.contact = ContactHelper(self)
@@ -21,10 +21,19 @@ class Application:
         except:
             return False
 
+    def is_session_valid(self):
+        try:
+            self.wd.find_element_by_xpath("(.//*[normalize-space(text()) and normalize-space(.)='home'])[1]/preceding::a[3]")
+            return True
+        except:
+            return False
+
     def open_home_page(self):
         wd = self.wd
-        if not (wd.current_url):
+        if (wd.current_url):
             wd.get("http://localhost/addressbook/")
+        else:
+            pass
 
     def destroy(self):
         self.wd.quit()
