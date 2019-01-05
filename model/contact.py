@@ -1,5 +1,5 @@
 __author__ = 'Dmitrii'
-
+from sys import maxsize
 
 class Contact:
 
@@ -24,4 +24,10 @@ class Contact:
         return "%s:%s:%s" % (self.contact_id, self.lname, self.fname)
 
     def __eq__(self, other):
-        return self.contact_id == other.conid and self.lname == other.lname and self.fname == other.fname
+        return (self.contact_id is None or other.contact_id is None or self.contact_id == other.contact_id, self.lname == other.lname, self.fname == other.fname)
+
+    def contact_id_or_max(self):
+        if self.contact_id:
+            return int(self.contact_id)
+        else:
+            return maxsize
