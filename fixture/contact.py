@@ -138,7 +138,7 @@ class ContactHelper:
                 all_phones = element.find_element_by_xpath(".//td[6]").text.splitlines()
                 self.contact_cache.append(Contact(lname=lastname, fname=firstname, contact_id=id,
                                                   home=all_phones[0], mobile=all_phones[1],
-                                                  work=all_phones[2]))#, phone2=all_phones[3]))
+                                                  work=all_phones[2], phone2=all_phones[3]))
         return list(self.contact_cache)
 
 
