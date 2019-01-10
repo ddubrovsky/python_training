@@ -10,7 +10,7 @@ class ContactHelper:
 
     def open_add_contact_page(self):
         wd = self.app.wd
-        if not (wd.current_url.endswith("/edit.php")) and not len (wd.find_elements_by_name("photo")) > 0:
+        if not (wd.current_url.endswith("/edit.php")) and not len(wd.find_elements_by_name("photo")) > 0:
             wd.find_element_by_link_text("add new").click()
 
     def change_field_value(self, field_name, text):
@@ -36,6 +36,8 @@ class ContactHelper:
         self.change_field_value("home", contact.home)
         self.change_field_value("work", contact.work)
         self.change_field_value("email", contact.email)
+        self.change_field_value("email2", contact.email2)
+        self.change_field_value("email3", contact.email3)
         self.change_field_select("bday", contact.bday)
         self.change_field_select("bmonth", contact.bmonth)
 #        Select(wd.find_element_by_name("bday")).select_by_visible_text(contact.bday)
@@ -50,7 +52,6 @@ class ContactHelper:
         wd.find_element_by_name("submit").click()
 
     def create(self, contact):
-        wd = self.app.wd
         self.open_add_contact_page()
         self.fill_contact_form(contact)
         self.submit_contact_creation()
@@ -74,7 +75,7 @@ class ContactHelper:
         self.select_contact_by_index(index)
         #click delete
         wd.find_element_by_xpath("//div/div[4]/form[2]/div[2]/input").click()
-        #submit deletion
+        # submit deletion
         wd.switch_to_alert().accept()
         self.return_to_home_page()
         self.contact_cache = None
@@ -135,9 +136,11 @@ class ContactHelper:
                 id = element.find_element_by_css_selector("td.center").find_element_by_name("selected[]").get_attribute("value")
                 lastname = element.find_element_by_xpath(".//td[2]").text
                 firstname = element.find_element_by_xpath(".//td[3]").text
+                address = element.find_element_by_xpath(".//td[4]").text
+                all_email = element.find_element_by_xpath(".//td[5]").text
                 all_phones = element.find_element_by_xpath(".//td[6]").text
-                self.contact_cache.append(Contact(lname=lastname, fname=firstname, contact_id=id,
-                                                  all_phones_from_home_page=all_phones))
+                self.contact_cache.append(Contact(lname=lastname, fname=firstname, contact_id=id, address=address,
+                                                  all_phones_from_home_page=all_phones, all_email_from_home_page=all_email))
         return list(self.contact_cache)
 
 
@@ -164,9 +167,15 @@ class ContactHelper:
         home = wd.find_element_by_name('home').get_attribute('value')
         mobile = wd.find_element_by_name('mobile').get_attribute('value')
         work = wd.find_element_by_name('work').get_attribute('value')
+        address = wd.find_element_by_name('address').get_attribute('value')
+        address2 = wd.find_element_by_name('address2').get_attribute('value')
         phone2 = wd.find_element_by_name('phone2').get_attribute('value')
+        email = wd.find_element_by_name('email').get_attribute('value')
+        email2 = wd.find_element_by_name('email2').get_attribute('value')
+        email3 = wd.find_element_by_name('email3').get_attribute('value')
         return Contact(fname=firstname, lname=lastname, contact_id=id,
-                       home=home, mobile=mobile, work=work, phone2=phone2)
+                       home=home, mobile=mobile, work=work, address=address, address2=address2,
+                       phone2=phone2, email=email, email2=email2, email3=email3)
 
     def get_contact_from_view_page(self, index):
         wd = self.app.wd
