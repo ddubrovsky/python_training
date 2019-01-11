@@ -1,13 +1,11 @@
 import json
 
 
-f = open("C:\Test/new.json")
-try:
-    res = json.load(f)
-except json.decoder.JSONDecodeError as ex:
-    print(ex)
-    res = {}
-finally:
-    f.close()
-
+with open("C:\Test/new.json") as f:
+    try:
+        res = json.load(f)
+    except json.decoder.JSONDecodeError as ex:
+        print(ex)
+        res = {}
+#finally убираем, файл сам себя закроет автоматически, with - означает объект будет использоваться только в рамках этого блока
 print(res)
