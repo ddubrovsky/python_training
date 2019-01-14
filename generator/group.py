@@ -8,6 +8,7 @@ import jsonpickle
 import getopt
 import sys
 
+
 try:
     opts, args = getopt.getopt(sys.argv[1:], "n:f:", ["number of groups", "file"])
 except getopt.GetoptError as err:
@@ -38,5 +39,5 @@ testdata = [Group(name="", header="", footer="")] + [
 file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", f)
 #открываем его на запись
 with open(file, 'w') as out:
-    jsonpickle.set_encoder_options('json', indent = 2)
-    out.write(jsonpickle.encode())
+    jsonpickle.set_encoder_options('json', indent=2)
+    out.write(jsonpickle.encode(testdata))
