@@ -7,3 +7,4 @@ pymysql
 mysql-connector-python-rf
 lxml
 pytest-allure-adaptor
+robotframework
