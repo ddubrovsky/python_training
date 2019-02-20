@@ -1,0 +1,98 @@
+{
+  "uid" : "49429ade458b7380",
+  "name" : "test_add_group.test_add_group[None:nameofHoEQ:headerO!`Oc[:footeriR'LJt72!v3 R  5WLO]",
+  "title" : "Test add group [None:nameofHoEQ:headerO!`Oc[:footeriR'LJt72!v3 R  5WLO]",
+  "time" : {
+    "start" : 1550669966727,
+    "stop" : 1550669969186,
+    "duration" : 2459
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 3
+  },
+  "failure" : {
+    "message" : "AssertionError: assert [32:name1:hea...-]?Xks*`, ...] == [32:name1:head...-]?Xks*`, ...]\n  Left contains more items, first extra item: None:nameofHoEQ:headerO!`Oc[:footeriR'LJt72!v3 R  5WLO\n  Use -v to get the full diff",
+    "stackTrace" : "app = <fixture.application.Application object at 0x0000019A37011A20>\ndb = <fixture.db.Dbfixture object at 0x0000019A3701E828>\njson_groups = None:nameofHoEQ:headerO!`Oc[:footeriR'LJt72!v3 R  5WLO\n\n    def test_add_group(app, db, json_groups):\n        group = json_groups\n        with pytest.allure.step('Given a group list'):\n            old_groups = db.get_group_list()\n        with pytest.allure.step('When I add a group %s to the list' % group):\n            app.group.create(group)\n        with pytest.allure.step('Then the new group list is equal to the old list with the added group'):\n            new_groups = db.get_group_list()\n            old_groups.append(group)\n>           assert sorted(old_groups, key=Group.id_or_max) == sorted(new_groups, key=Group.id_or_max)\nE           AssertionError: assert [32:name1:hea...-]?Xks*`, ...] == [32:name1:head...-]?Xks*`, ...]\nE             Left contains more items, first extra item: None:nameofHoEQ:headerO!`Oc[:footeriR'LJt72!v3 R  5WLO\nE             Use -v to get the full diff\n\ntest\\test_add_group.py:16: AssertionError"
+  },
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "FAILED",
+  "suite" : {
+    "uid" : "be39b526fc48ae8",
+    "name" : "test",
+    "title" : "Test"
+  },
+  "steps" : [ {
+    "name" : "Given a group list",
+    "title" : "Given a group list",
+    "time" : {
+      "start" : 1550669966797,
+      "stop" : 1550669966797,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "When I add a group None:nameofHoEQ:headerO!`Oc[:footeriR'LJt72!v3 R  5WLO to the list",
+    "title" : "When I add a group None:nameofHoEQ:headerO!`Oc[:footeriR'LJt72!v3 R  5WLO to the list",
+    "time" : {
+      "start" : 1550669966797,
+      "stop" : 1550669969132,
+      "duration" : 2335
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Then the new group list is equal to the old list with the added group",
+    "title" : "Then the new group list is equal to the old list with the added group",
+    "time" : {
+      "start" : 1550669969132,
+      "stop" : 1550669969132,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "FAILED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "ddubrovsky"
+  }, {
+    "name" : "suite-name",
+    "value" : "test"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "thread",
+    "value" : "14932-MainThread"
+  } ],
+  "parameters" : [ ]
+}

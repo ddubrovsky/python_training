@@ -1,0 +1,50 @@
+{
+  "uid" : "6f170bdd8d655b0a",
+  "name" : "test_add_group.test_add_group[None:name:hvVA# :header!{>KK5:footerUGFVU} 0C*araOR  {,]",
+  "title" : "Test add group [None:name:hvVA# :header!{>KK5:footerUGFVU} 0C*araOR  {,]",
+  "time" : {
+    "start" : 1550666549631,
+    "stop" : 1550666552153,
+    "duration" : 2522
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "suite" : {
+    "uid" : "13e4085d67b978f7",
+    "name" : "test",
+    "title" : "Test"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "ddubrovsky"
+  }, {
+    "name" : "suite-name",
+    "value" : "test"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "thread",
+    "value" : "1756-MainThread"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  } ],
+  "parameters" : [ ]
+}

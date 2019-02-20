@@ -1,0 +1,95 @@
+{
+  "uid" : "8729e76e47e97441",
+  "name" : "test_add_group.test_add_group[None:name:hvVA# :header!{>KK5:footerUGFVU} 0C*araOR  {,]",
+  "title" : "Test add group [None:name:hvVA# :header!{>KK5:footerUGFVU} 0C*araOR  {,]",
+  "time" : {
+    "start" : 1550669959104,
+    "stop" : 1550669961654,
+    "duration" : 2550
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 3
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "suite" : {
+    "uid" : "be39b526fc48ae8",
+    "name" : "test",
+    "title" : "Test"
+  },
+  "steps" : [ {
+    "name" : "Given a group list",
+    "title" : "Given a group list",
+    "time" : {
+      "start" : 1550669959173,
+      "stop" : 1550669959173,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "When I add a group None:name:hvVA# :header!{>KK5:footerUGFVU} 0C*araOR  {, to the list",
+    "title" : "When I add a group None:name:hvVA# :header!{>KK5:footerUGFVU} 0C*araOR  {, to the list",
+    "time" : {
+      "start" : 1550669959173,
+      "stop" : 1550669961654,
+      "duration" : 2481
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Then the new group list is equal to the old list with the added group",
+    "title" : "Then the new group list is equal to the old list with the added group",
+    "time" : {
+      "start" : 1550669961654,
+      "stop" : 1550669961654,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "ddubrovsky"
+  }, {
+    "name" : "suite-name",
+    "value" : "test"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "thread",
+    "value" : "14932-MainThread"
+  } ],
+  "parameters" : [ ]
+}

@@ -1,0 +1,53 @@
+{
+  "uid" : "af8dbb9136f32e1c",
+  "name" : "test_add_group.test_add_group[None:nameofHoEQ:headerO!`Oc[:footeriR'LJt72!v3 R  5WLO]",
+  "title" : "Test add group [None:nameofHoEQ:headerO!`Oc[:footeriR'LJt72!v3 R  5WLO]",
+  "time" : {
+    "start" : 1550666557151,
+    "stop" : 1550666559689,
+    "duration" : 2538
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : {
+    "message" : "AssertionError: assert [32:name1:hea...-]?Xks*`, ...] == [32:name1:head...-]?Xks*`, ...]\n  Left contains more items, first extra item: None:nameofHoEQ:headerO!`Oc[:footeriR'LJt72!v3 R  5WLO\n  Use -v to get the full diff",
+    "stackTrace" : "app = <fixture.application.Application object at 0x000001FD0AF6FE80>\ndb = <fixture.db.Dbfixture object at 0x000001FD0AF5C6A0>\njson_groups = None:nameofHoEQ:headerO!`Oc[:footeriR'LJt72!v3 R  5WLO\n\n    def test_add_group(app, db, json_groups):\n        group = json_groups\n        old_groups = db.get_group_list()\n        app.group.create(group)\n        new_groups = db.get_group_list()\n        old_groups.append(group)\n>       assert sorted(old_groups, key=Group.id_or_max) == sorted(new_groups, key=Group.id_or_max)\nE       AssertionError: assert [32:name1:hea...-]?Xks*`, ...] == [32:name1:head...-]?Xks*`, ...]\nE         Left contains more items, first extra item: None:nameofHoEQ:headerO!`Oc[:footeriR'LJt72!v3 R  5WLO\nE         Use -v to get the full diff\n\ntest\\test_add_group.py:12: AssertionError"
+  },
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "FAILED",
+  "suite" : {
+    "uid" : "13e4085d67b978f7",
+    "name" : "test",
+    "title" : "Test"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "ddubrovsky"
+  }, {
+    "name" : "suite-name",
+    "value" : "test"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "thread",
+    "value" : "1756-MainThread"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  } ],
+  "parameters" : [ ]
+}
