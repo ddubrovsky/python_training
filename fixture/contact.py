@@ -89,9 +89,9 @@ class ContactHelper:
         self.app.open_home_page()
         self.select_contact_by_id(id)
         #click delete
-        wd.find_element_by_xpath("//div/div[4]/form[2]/div[2]/input").click()
+        wd.find_element_by_xpath("/html/body/div/div[4]/form[2]/input[2]").click()
         # submit deletion
-        wd.switch_to_alert().accept()
+        #wd.switch_to_alert().accept()
         self.return_to_home_page()
         self.contact_cache = None
 
